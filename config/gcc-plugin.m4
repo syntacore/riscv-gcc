@@ -46,7 +46,7 @@ AC_DEFUN([GCC_ENABLE_PLUGINS],
      *)
        if test x$build = x$host; then
 	 export_sym_check="$ac_cv_prog_OBJDUMP -T"
-       elif test x$host = x$target; then
+       elif test x$host = x$target && test "x$gcc_cv_objdump" != x; then
 	 export_sym_check="$gcc_cv_objdump -T"
        else
 	 export_sym_check="$ac_cv_prog_OBJDUMP -T"
